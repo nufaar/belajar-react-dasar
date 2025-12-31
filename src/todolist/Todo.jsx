@@ -1,11 +1,11 @@
-export default function Todo({ text, isCompleted }) {
-  if (isCompleted) {
+export default function Todo({ text, isCompleted, isDeleted = false }) {
+  if (isDeleted) {
+    return null;
+  } else {
     return (
       <li>
-        <del>{text}</del>
+        {text} {isCompleted && "✅"}
       </li>
     );
-  } else {
-    return <li>{text}</li>;
   }
 }
