@@ -2,13 +2,14 @@ import { useState } from "react";
 
 export default function Counter() {
   let [counter, setCounter] = useState(0);
+  console.info(`Render Counter ${counter}`);
   return (
     <div>
       <button
         onClick={(e) => {
-          setCounter(counter + 1);
-          setCounter(counter + 1);
-          setCounter(counter + 1);
+          setCounter((c) => c + 1);
+          setCounter((c) => c + 1);
+          setCounter((c) => c + 1);
           console.log(counter);
         }}
       >
